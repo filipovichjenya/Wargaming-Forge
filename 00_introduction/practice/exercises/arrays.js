@@ -6,7 +6,12 @@ and last chars of the string are the same.
 ['abc', 'aa', 'bb'] yields 2
 */
 export function matchEnds(words) {
-  // YOUR CODE HERE
+  let count = 0;
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length < 2) continue;
+    if (words[i][0] === words[i][words[i].length - 1]) count++;
+  }
+  return count;
 }
 
 /*
@@ -18,7 +23,10 @@ and passed array in center
 [5, 2, 14] yields [12, 5, 2, 14, 19]
 */
 export function addFirstAndLast(numbers) {
-  // YOUR CODE HERE
+  let num = numbers.slice().sort((a, b) => a - b);
+  numbers.unshift(num[num.length - 1] - num[0]);
+  numbers.push(num[num.length - 1] + num[0]);
+  return numbers;
 }
 
 /*
@@ -30,7 +38,21 @@ Hint: this can be done by making 2 lists and sorting each of them
 before combining them.
 */
 export function xLetterFirst(words) {
-  // YOUR CODE HERE
+  let result = [];
+  let resultX = [];
+  words.sort((a, b) => {
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
+  for (let i = 0; i < words.length; i++) {
+    if (words[i][0] === 'x') {
+      resultX.push(words[i]);
+      continue;
+    }
+    result.push(words[i]);
+  }
+  return [...resultX, ...result];
 }
 
 /*
@@ -40,5 +62,5 @@ e.g. [[1, 7], [1, 3], [3, 4, 5], [2, 2]] yields
 [[2, 2], [1, 3], [3, 4, 5], [1, 7]]
 */
 export function sortByLast(nestedArrays) {
-  // YOUR CODE HERE
+  return nestedArrays.sort((a, b) => a[a.length - 1] - b[b.length - 1]);
 }
