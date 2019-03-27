@@ -1,6 +1,7 @@
 /*
 write a function's body that concat all passed strings to one and returns it
 */
+
 export function concat(...strings) {
   return strings.join('');
 }
