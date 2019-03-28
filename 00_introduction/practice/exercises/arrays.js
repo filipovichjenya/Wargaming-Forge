@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 /*
 Given a list of strings, return the count of the number of
 strings where the string length is 2 or more and the first
@@ -20,10 +21,10 @@ first element is diffrence between maximum and minimum of passed array
 last element is sum of minimum and maximum
 and passed array in center
 [1, 2, 3] yields [2, 1, 2, 3, 4]
-[5, 2, 14] yields [12, 5, 2, 14, 19]
+[5, 2, 14] yields [12, 5, 2, 14, 16]
 */
 export function addFirstAndLast(numbers) {
-  let num = numbers.slice().sort((a, b) => a - b);
+  const num = numbers.slice().sort((a, b) => a - b);
   numbers.unshift(num[num.length - 1] - num[0]);
   numbers.push(num[num.length - 1] + num[0]);
   return numbers;
@@ -38,8 +39,8 @@ Hint: this can be done by making 2 lists and sorting each of them
 before combining them.
 */
 export function xLetterFirst(words) {
-  let result = [];
-  let resultX = [];
+  const result = [];
+  const resultX = [];
   words.sort((a, b) => {
     if (a > b) return 1;
     if (a < b) return -1;
