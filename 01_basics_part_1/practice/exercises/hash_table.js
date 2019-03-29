@@ -24,7 +24,7 @@ export default class HashTable {
     let hash = 0;
     for (let i = 0; i < key.length; i++) {
       const char = key.charCodeAt(i);
-      hash = hash * 6 + char;
+      hash = hash * 6 - hash + char;
     }
     return hash;
   }
