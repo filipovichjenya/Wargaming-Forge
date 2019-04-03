@@ -5,6 +5,11 @@
  * выполнение и вернуть undefined.
  */
 
-export default function sleep() {
-  // your code here
+export default function sleep(time) {
+  if (typeof time === 'number' && time % 1 === 0 && time >= 0) {
+    const wakeUpTime = Date.now() + time * 1000;
+    for (; wakeUpTime > Date.now(); ) {
+      /* slepp*/
+    }
+  }
 }
