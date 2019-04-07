@@ -8,6 +8,7 @@
 
 - [00 Вступление](#00-вступление)
 - [01 Основы JS](#01-основы)
+- [02 Функции](#02-функции)
 
 ----
 
@@ -58,6 +59,16 @@ WF
 - [задание](https://github.com/wgnet/wgforge_platform_frontend_course/tree/master/01_basics_part_2/practice)
 
 
+
+[к содержанию ⬆️](#содержание)
+
+----
+
+## 02 Функции
+
+- [Слайды](https://wgnet.github.io/wgforge_platform_frontend_course/02_functions/)
+
+- [Задание](https://github.com/wgnet/wgforge_platform_frontend_course/tree/master/02_functions/practice)
 
 [к содержанию ⬆️](#содержание)
 
